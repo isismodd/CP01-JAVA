@@ -4,7 +4,7 @@ import br.com.fiap.bean.DespesaFamiliar;
 
 import java.util.Scanner;
 
-// Isis Macedo e Andrade RM561497 | Ana clara RM.... | Theodoro
+// Isis Macedo e Andrade RM561497 | Ana Clara O. Nascimento RM561957 | Theodoro S. Furtado RM566019
 public class Main {
     public static void main(String[] args) {
         DespesaFamiliar despesas = new DespesaFamiliar();
