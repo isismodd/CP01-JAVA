@@ -8,18 +8,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         DespesaFamiliar despesas = new DespesaFamiliar();
+
         double rendaFamiliar;
         int numeroDeMoradores;
         double gastoComLuz;
         double gastoComAgua;
         double gastoComInternet;
         double valorMensalidadeDaAcademia;
-        double totalDespesas;
-        double rendaFamiliarLiquida;
+
         Scanner scan;
 
         try{
             scan = new Scanner(System.in);
+
             System.out.println("Digite o valor da sua renda familiar: ");
             rendaFamiliar = scan.nextDouble();
 
@@ -44,15 +45,23 @@ public class Main {
             despesas.gastoComAgua = gastoComAgua;
             despesas.gastoComInternet = gastoComInternet;
             despesas.valorMensalidadeDaAcademia = valorMensalidadeDaAcademia;
-            totalDespesas = despesas.totalDespesas;
-            rendaFamiliarLiquida = despesas.rendaFamiliarLiquida;
+
+            // Calcula e armazena os resultados
+            despesas.totalDespesas = despesas.calcularTotalDeDespesas();
+            despesas.rendaFamiliarLiquida = despesas.calcularRendaFamiliarLiquida();
 
 
-            despesas.calcularTotalDeDespesas();
-
-            despesas.calcularRendaFamiliarLiquida( despesas.totalDespesas,  despesas.rendaFamiliar);
-
-            System.out.printf("Tabela de renda e gastos\n=========================\nRenda familiar bruta: %.3f\nTotal de gastos com despesas: %.3f\nValor da renda familiar líquida: %.3f\n==========================",rendaFamiliar,totalDespesas,rendaFamiliarLiquida);
+            System.out.printf("""
+                Tabela de renda e gastos
+                =========================
+                Renda familiar bruta: %.3f
+                Total de gastos com despesas: %.3f
+                Valor da renda familiar líquida: %.3f
+                ==========================
+                """,
+                    despesas.rendaFamiliar,
+                    despesas.totalDespesas,
+                    despesas.rendaFamiliarLiquida);
 
 
         } catch (RuntimeException e) {

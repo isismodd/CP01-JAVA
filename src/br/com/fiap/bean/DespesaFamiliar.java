@@ -13,13 +13,13 @@ public class DespesaFamiliar {
 
     // Metodos
     public double calcularTotalDeDespesas(){
-     double totalDespesas = gastoComLuz + gastoComAgua + gastoComInternet + (valorMensalidadeDaAcademia * numeroDeMoradores);
+     totalDespesas = gastoComLuz + gastoComAgua + gastoComInternet + (valorMensalidadeDaAcademia * numeroDeMoradores);
 
       return totalDespesas;
     }
 
-    public double calcularRendaFamiliarLiquida(double totalDespesas, double rendaFamiliar){
-       double rendaFamiliarLiquida = totalDespesas - rendaFamiliar;
+    public double calcularRendaFamiliarLiquida(){
+       rendaFamiliarLiquida =  rendaFamiliar - totalDespesas;
 
         return rendaFamiliarLiquida;
     }
