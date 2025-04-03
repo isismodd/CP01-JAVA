@@ -1,5 +1,5 @@
 package br.com.fiap.bean;
-// Isis Macedo e Andrade RM561497 | Ana clara RM.... | Theodoro ... RM...
+// Isis Macedo e Andrade RM561497 | Ana Clara O. Nascimento RM561957 | Theodoro S. Furtado RM566019
 public class DespesaFamiliar {
     // Atributos
     public double rendaFamiliar;
